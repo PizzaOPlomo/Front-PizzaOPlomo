@@ -11,7 +11,7 @@ import { HeaderComponent } from './components/include/header/header.component';
     routingComponents,
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
