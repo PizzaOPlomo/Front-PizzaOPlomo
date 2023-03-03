@@ -6,14 +6,13 @@ import {AppRoutingModule, routingComponents} from "./app-routing.module";
 import {FooterComponent} from './components/include/footer/footer.component';
 import {HeaderComponent} from './components/include/header/header.component';
 import {HttpClientModule} from "@angular/common/http";
-import { SelectionComponent } from './components/base/card/selection/selection.component';
 
 @NgModule({
   declarations: [
     routingComponents,
     AppComponent,
     FooterComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

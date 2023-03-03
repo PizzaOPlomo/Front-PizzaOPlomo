@@ -1,42 +1,82 @@
-<nav class="border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-  <div class="container flex flex-wrap items-center justify-center mx-auto">
-    <div class="flex md:order-2">
-      <button aria-controls="navbar-cta" aria-expanded="false"
-              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              data-collapse-toggle="navbar-cta" type="button">
+<nav>
+  <div class="mx-auto px-4 py-4 flex items-center justify-between sm:px-6 lg:px-8">
+    <div class="flex items-center">
+      <a class="text-white text-2xl font-semibold" routerLink="">
+        Pizza<span class="text-red-500">O</span>'Plomo
+      </a>
+    </div>
+    <div class="hidden md:block">
+      <div class="flex items-center space-x-4">
+        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-md font-medium" routerLink="">
+          Accueil
+        </a>
+        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-md font-medium" routerLink="card/selection">
+          La carte
+        </a>
+        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-md font-medium" routerLink="blog">
+          Blog
+        </a>
+        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-md font-medium" routerLink="contact">
+          Contact
+        </a>
+      </div>
+    </div>
+    <div class="hidden md:block">
+      <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" routerLink="auth/login">
+        Se connecter
+      </a>
+    </div>
+    <div class="-mr-2 flex md:hidden">
+      <button aria-expanded="false" (click)="toggleMenu()"
+              class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              type="button">
         <span class="sr-only">Open main menu</span>
-        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-             xmlns="http://www.w3.org/2000/svg">
-          <path clip-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                fill-rule="evenodd"></path>
+        <!-- Icon when menu is closed. -->
+        <!--
+          Heroicon name: outline/menu
+
+          Menu open: "hidden", Menu closed: "block"
+        -->
+        <svg aria-hidden="true" class="block h-6 w-6" fill="none" stroke="currentColor"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+        <!-- Icon when menu is open. -->
+        <!--
+          Heroicon name: outline/x
+
+          Menu open: "block", Menu closed: "hidden"
+        -->
+        <svg aria-hidden="true" class="hidden h-6 w-6" fill="none" stroke="currentColor"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
         </svg>
       </button>
     </div>
-    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-      <ul
-        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0">
-        <li>
-          <a
-            class="text-lg block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-600 md:p-0"
-            routerLink="">Accueil</a>
-        </li>
-        <li>
-          <a
-            class="text-lg block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-600 md:p-0"
-            routerLink="card/selection">La Carte</a>
-        </li>
-        <li>
-          <a
-            class="text-lg block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-600 md:p-0"
-            routerLink="blog">Blog</a>
-        </li>
-        <li>
-          <a
-            class="text-lg block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-600 md:p-0"
-            routerLink="contact">Contact</a>
-        </li>
-      </ul>
+  </div>
+
+  <!--
+  Mobile menu, toggle classNamees based on menu state.
+
+  Open: "block", closed: "hidden"
+-->
+  <div *ngIf="isMenuOpen">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="">
+        Accueil
+      </a>
+      <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="card/selection">
+        La carte
+      </a>
+      <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="blog">
+        Blog
+      </a>
+      <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="contact">
+        Contact
+      </a>
+      <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="auth/login">
+        Se connecter
+      </a>
     </div>
   </div>
 </nav>

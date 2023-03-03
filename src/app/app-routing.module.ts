@@ -5,6 +5,8 @@ import {CardComponent} from "./components/base/card/card.component";
 import {BlogComponent} from "./components/base/blog/blog.component";
 import {ContactComponent} from "./components/base/contact/contact.component";
 import {SelectionComponent} from "./components/base/card/selection/selection.component";
+import {LoginComponent} from "./components/base/auth/login/login.component";
+import {RegisterComponent} from "./components/base/auth/register/register.component";
 
 const routes: Routes = [
   {
@@ -21,6 +23,12 @@ const routes: Routes = [
   },
   {
     path: "contact", component: ContactComponent
+  },
+  {
+    path: "auth/login", component: LoginComponent
+  },
+  {
+    path: "auth/register", component: RegisterComponent
   }
 ]
 
@@ -32,5 +40,6 @@ export class AppRoutingModule {
 }
 
 export const routingComponents = [
-  HomeComponent, CardComponent, SelectionComponent, BlogComponent, ContactComponent
+  HomeComponent, CardComponent, SelectionComponent, BlogComponent, ContactComponent,
+  LoginComponent, RegisterComponent
 ]
