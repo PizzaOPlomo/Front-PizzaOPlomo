@@ -30,7 +30,7 @@ export class UserService {
     if (this.isConnected) {
       this.isConnected = false;
       ["Logged", "Email", "Pass"].forEach(v => this.localStorage.get.removeItem(v));
-      await this.router.navigate(["/client"]);
+      await this.router.navigate(["/auth/login"]);
     }
   }
 

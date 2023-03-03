@@ -13,8 +13,8 @@
             Nom
           </label>
           <div class="mt-1">
-            <input autocomplete="name"
-                   [(ngModel)]="name"
+            <input [(ngModel)]="name"
+                   autocomplete="name"
                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
                    id="name" name="name" required
                    type="text">
@@ -26,8 +26,8 @@
             Prénom
           </label>
           <div class="mt-1">
-            <input autocomplete="firstname"
-                   [(ngModel)]="firstname"
+            <input [(ngModel)]="firstname"
+                   autocomplete="firstname"
                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
                    id="firstname" name="firstname" required
                    type="text">
@@ -39,8 +39,8 @@
             Adresse email
           </label>
           <div class="mt-1">
-            <input autocomplete="email"
-                   [(ngModel)]="email"
+            <input [(ngModel)]="email"
+                   autocomplete="email"
                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
                    id="email" name="email" required
                    type="email">
@@ -59,7 +59,8 @@
                    type="password">
             <div (click)="showPassword()" class="absolute inset-y-0 right-0 pr-3 flex items-center">
               <svg class="h-6 text-gray-700 cursor-pointer toggle-password" fill="none"
-                   stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                   stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                   viewBox="0 0 24 24"
                    xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.36 5.64a9 9 0 1 1-12.73 0l-1.42 1.41a11 11 0 1 0 15.18 0l-1.43-1.41z"></path>
                 <path d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>

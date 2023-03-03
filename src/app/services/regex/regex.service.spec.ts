@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { RegexService } from './regex.service';
+import {RegexService} from './regex.service';
 
 describe('RegexService', () => {
   let service: RegexService;
