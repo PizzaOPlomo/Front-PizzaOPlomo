@@ -16,7 +16,7 @@ export class ForgotComponent implements OnInit {
   }
 
   async processForm(): Promise<void> {
-    if (this.email != null) {
+    if (this.email != undefined) {
       if (!this.regexService.isEmailValid(this.email)) {
         alert("email is not valid");
         return;

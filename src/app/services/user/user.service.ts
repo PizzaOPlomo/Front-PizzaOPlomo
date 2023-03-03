@@ -34,4 +34,26 @@ export class UserService {
     }
   }
 
+  async login(email: string, password: string): Promise<boolean> {
+    const request = await this.httpService.login({email: email, password: password});
+    let response: boolean = false;
+
+    request.subscribe((res: any) => {
+      response = res;
+    });
+
+    return response;
+  }
+
+  async register(name: string, firstname: string, email: string, password: string): Promise<boolean> {
+    const request = await this.httpService.register({email: email, password: password});
+    let response: boolean = false;
+
+    request.subscribe((res: any) => {
+      response = res;
+    });
+
+    return response;
+  }
+
 }
