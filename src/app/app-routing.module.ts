@@ -8,6 +8,7 @@ import {SelectionComponent} from "./components/base/card/selection/selection.com
 import {LoginComponent} from "./components/base/auth/login/login.component";
 import {RegisterComponent} from "./components/base/auth/register/register.component";
 import {ClientComponent} from "./components/base/client/client.component";
+import {ForgotComponent} from "./components/base/auth/forgot/forgot.component";
 
 const routes: Routes = [
   {
@@ -29,6 +30,9 @@ const routes: Routes = [
     path: "auth/login", component: LoginComponent
   },
   {
+    path: "auth/forgot", component: ForgotComponent
+  },
+  {
     path: "auth/register", component: RegisterComponent
   },
   {
@@ -45,6 +49,6 @@ export class AppRoutingModule {
 
 export const routingComponents = [
   HomeComponent, CardComponent, SelectionComponent, BlogComponent, ContactComponent,
-  LoginComponent, RegisterComponent,
+  LoginComponent, RegisterComponent, ForgotComponent,
   ClientComponent
 ]

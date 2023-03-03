@@ -14,4 +14,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  async processForm(): Promise<void> {
+
+  }
+
 }
