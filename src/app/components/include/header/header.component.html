@@ -32,6 +32,11 @@
         routerLink="client">
         Espace client
       </a>
+      <a
+        *ngIf="user.isConnected" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        (click)="user.logout()" )>
+        Déconnexion
+      </a>
     </div>
     <div class="-mr-2 flex md:hidden">
       <button (click)="toggleMenu()" aria-expanded="false"
@@ -92,6 +97,11 @@
         *ngIf="user.isConnected" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
         routerLink="client">
         Espace client
+      </a>
+      <a
+        *ngIf="user.isConnected" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        (click)="user.logout()" )>
+        Déconnexion
       </a>
     </div>
   </div>
