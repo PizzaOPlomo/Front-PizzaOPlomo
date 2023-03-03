@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SelectionComponent } from './selection.component';
+import {SelectionComponent} from './selection.component';
 
 describe('SelectionComponent', () => {
   let component: SelectionComponent;
@@ -8,9 +8,9 @@ describe('SelectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SelectionComponent ]
+      declarations: [SelectionComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
