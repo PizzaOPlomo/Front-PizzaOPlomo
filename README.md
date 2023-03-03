@@ -5,8 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## TailwindCSS
 
 ```
-npx tailwindcss -i ./tailwind.css -o ./src/assets/cs
-s/output.css --watch
+npx tailwindcss -i ./tailwind.css -o ./src/assets/css/output.css --watch
 ```
 
 ## Development server

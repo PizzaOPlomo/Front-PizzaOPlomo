@@ -3,3 +3,25 @@
 body {
   background-color: #1B222A;
 }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: #1B222A;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+}
