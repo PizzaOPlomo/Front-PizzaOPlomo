@@ -6,6 +6,7 @@ import {AppRoutingModule, routingComponents} from "./app-routing.module";
 import {FooterComponent} from './components/include/footer/footer.component';
 import {HeaderComponent} from './components/include/header/header.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,8 @@
   <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">Sélectionnez votre
     restaurant</h1>
   <div class="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3">
-    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden" *ngFor="let restaurant of restaurant.restaurants">
+    <div *ngFor="let restaurant of restaurantService.restaurants"
+         class="flex flex-col rounded-lg shadow-lg overflow-hidden">
       <div class="flex-shrink-0">
         <img alt="Restaurant"
              class="h-48 w-full object-cover"

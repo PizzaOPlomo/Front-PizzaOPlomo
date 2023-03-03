@@ -22,12 +22,19 @@
       </div>
     </div>
     <div class="hidden md:block">
-      <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" routerLink="auth/login">
+      <a
+        *ngIf="!user.isConnected" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        routerLink="auth/login">
         Se connecter
+      </a>
+      <a
+        *ngIf="user.isConnected" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        routerLink="client">
+        Espace client
       </a>
     </div>
     <div class="-mr-2 flex md:hidden">
-      <button aria-expanded="false" (click)="toggleMenu()"
+      <button (click)="toggleMenu()" aria-expanded="false"
               class="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               type="button">
         <span class="sr-only">Open main menu</span>
@@ -65,7 +72,8 @@
       <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="">
         Accueil
       </a>
-      <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="card/selection">
+      <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+         routerLink="card/selection">
         La carte
       </a>
       <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="blog">
@@ -74,8 +82,15 @@
       <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="contact">
         Contact
       </a>
-      <a class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium" routerLink="auth/login">
+      <a
+        *ngIf="!user.isConnected" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        routerLink="auth/login">
         Se connecter
+      </a>
+      <a
+        *ngIf="user.isConnected" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        routerLink="client">
+        Espace client
       </a>
     </div>
   </div>
