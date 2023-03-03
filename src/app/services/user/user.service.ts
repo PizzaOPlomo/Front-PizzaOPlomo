@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
 import {LocalstorageService} from "../localstorage/localstorage.service";
 import {Router} from "@angular/router";
+import {HttpService} from "../http/http.service";
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +9,7 @@ import {Router} from "@angular/router";
 export class UserService {
   isConnected: boolean = false;
 
-  constructor(private router: Router, private http: HttpClient, private localStorage: LocalstorageService) {
+  constructor(private router: Router, private httpService: HttpService, private localStorage: LocalstorageService) {
     const isConnectedInCache: string | null = localStorage.get.getItem("Logged");
 
     if (isConnectedInCache != null) {
@@ -18,21 +17,13 @@ export class UserService {
       const passInCache: string | null = this.localStorage.get.getItem("Pass");
 
       if (emailInCache != null && passInCache != null) {
-        this.login({email: emailInCache, password: passInCache}).then(s => {
+        this.httpService.login({email: emailInCache, password: passInCache}).then(s => {
           s.subscribe((res: any) => {
             this.isConnected = res;
           });
         })
       }
     }
-  }
-
-  async register(user: any): Promise<Observable<Object>> {
-    return this.http.post('http://localhost:3000/users/register', user);
-  }
-
-  async login(user: any): Promise<Observable<Object>> {
-    return this.http.post('http://localhost:3000/users/login', user);
   }
 
   async logout(): Promise<void> {
