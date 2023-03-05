@@ -1,0 +1,8 @@
+.main-background {
+  background-image: url('../../../../assets/img/home_background.webp');
+  background-size: cover;
+}
+
+main {
+  min-height: calc(100vh - 4rem);
+}

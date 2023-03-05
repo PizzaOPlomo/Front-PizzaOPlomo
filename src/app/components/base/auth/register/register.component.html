@@ -1,0 +1,98 @@
+<div class="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <h2 class="text-center text-3xl font-extrabold text-white">
+      Inscrivez-vous pour accéder à votre compte
+    </h2>
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-gray-100 py-8 px-4 shadow sm:rounded-lg sm:px-10">
+      <form (ngSubmit)="processForm()" class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="name">
+            Nom
+          </label>
+          <div class="mt-1">
+            <input [(ngModel)]="name"
+                   autocomplete="name"
+                   class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
+                   id="name" name="name" required
+                   type="text">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="firstname">
+            Prénom
+          </label>
+          <div class="mt-1">
+            <input [(ngModel)]="firstname"
+                   autocomplete="firstname"
+                   class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
+                   id="firstname" name="firstname" required
+                   type="text">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="email">
+            Adresse email
+          </label>
+          <div class="mt-1">
+            <input [(ngModel)]="email"
+                   autocomplete="email"
+                   class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
+                   id="email" name="email" required
+                   type="email">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700" for="password">
+            Mot de passe
+          </label>
+          <div class="mt-1 relative">
+            <input [(ngModel)]="password"
+                   autocomplete="current-password"
+                   class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400 sm:text-sm"
+                   id="password" name="password" required
+                   type="password">
+            <div (click)="showPassword()" class="absolute inset-y-0 right-0 pr-3 flex items-center">
+              <svg class="h-6 text-gray-700 cursor-pointer toggle-password" fill="none"
+                   stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                   viewBox="0 0 24 24"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.36 5.64a9 9 0 1 1-12.73 0l-1.42 1.41a11 11 0 1 0 15.18 0l-1.43-1.41z"></path>
+                <path d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400"
+            type="submit">
+            S'inscrire
+          </button>
+        </div>
+      </form>
+      <div class="flex items-center justify-center mt-6">
+        <span class="text-gray-700 mr-2">Vous avez déjà un compte?</span>
+        <a class="font-medium text-yellow-400 hover:text-yellow-500" routerLink="/auth/login">Connectez-vous</a>
+      </div>
+      <div class="mt-6">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="px-2 bg-gray-900 text-white">
+              Ou connectez-vous avec
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
