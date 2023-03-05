@@ -17,9 +17,16 @@
                 </svg>
               </div>
               <p class="text-gray-800 text-xl mb-4">Faites scanner le QR code pour accéder aux fidélités</p>
-              <img alt="QR code"
-                   class="w-64 h-64 object-cover mb-4" src="https://www.pngmart.com/files/10/Qr-Code-Transparent-PNG.png">
-              </div>
+              <img *ngIf="QRCodeShowed"
+                   alt="QR code"
+                   class="w-64 h-64 object-cover mb-4" src="{{ QRCode }}">
+              <button
+                (click)="showQRCode()"
+                *ngIf="!QRCodeShowed"
+                class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+                Afficher le QR code
+              </button>
+            </div>
           </div>
         </div>
       </div>
