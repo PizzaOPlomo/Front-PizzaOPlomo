@@ -4,6 +4,10 @@ body {
   background-color: #1B222A;
 }
 
+.main-bg-color {
+  background-color: #1B222A;
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
 }

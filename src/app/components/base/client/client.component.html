@@ -1,1 +1,59 @@
-<p>client works!</p>
+<app-customernav>
+
+  <div class="flex-1 p-8">
+    <h2 class="text-3xl font-bold mb-4">Accueil</h2>
+
+    <div class="container mx-auto py-8">
+      <div class="flex justify-center">
+        <img alt="Logo" class="w-32 h-32 rounded-full border border-gray-300" src="assets/img/favicon.webp">
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <div class="flex justify-center">
+            <img alt="Statistiques" class="w-16 h-16" src="https://via.placeholder.com/150">
+          </div>
+          <h2 class="text-xl font-bold text-center mt-4">Programme fidélité</h2>
+          <div class="flex justify-center mt-2">
+            <span class="text-gray-700 text-sm">Niveau 1</span>
+          </div>
+          <div class="flex justify-center mt-2">
+            <span class="text-gray-700 text-sm">Points de fidélité:</span>
+            <span class="font-bold ml-1">120</span>
+          </div>
+          <div class="flex justify-center mt-10">
+            <a class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" routerLink="/client/fidelity">
+              Voir le programme
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-6">
+          <div class="flex justify-center">
+            <img alt="Commandes en cours" class="w-16 h-16" src="https://via.placeholder.com/150">
+          </div>
+          <h2 class="text-xl font-bold text-center mt-4">Dernière factures</h2>
+          <div class="mt-2">
+            <div class="flex justify-between">
+              <span class="text-gray-700 text-sm">Commande #101</span>
+              <span class="font-bold">25,00€</span>
+            </div>
+            <div class="flex justify-between mt-1">
+              <span class="text-gray-700 text-sm">Commande #102</span>
+              <span class="font-bold">18,50€</span>
+            </div>
+            <div class="flex justify-between mt-1">
+              <span class="text-gray-700 text-sm">Commande #103</span>
+              <span class="font-bold">12,00€</span>
+            </div>
+          </div>
+          <div class="flex justify-center mt-4">
+            <a class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" routerLink="/client/settings">Voir
+              toutes les commandes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</app-customernav>

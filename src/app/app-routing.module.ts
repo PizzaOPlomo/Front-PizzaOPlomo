@@ -9,6 +9,8 @@ import {LoginComponent} from "./components/base/auth/login/login.component";
 import {RegisterComponent} from "./components/base/auth/register/register.component";
 import {ClientComponent} from "./components/base/client/client.component";
 import {ForgotComponent} from "./components/base/auth/forgot/forgot.component";
+import {FidelityComponent} from "./components/base/client/fidelity/fidelity.component";
+import {SettingsComponent} from "./components/base/client/settings/settings.component";
 
 const routes: Routes = [
   {
@@ -37,6 +39,12 @@ const routes: Routes = [
   },
   {
     path: "client", component: ClientComponent
+  },
+  {
+    path: "client/fidelity", component: FidelityComponent
+  },
+  {
+    path: "client/settings", component: SettingsComponent
   }
 ]
 
@@ -50,5 +58,5 @@ export class AppRoutingModule {
 export const routingComponents = [
   HomeComponent, CardComponent, SelectionComponent, BlogComponent, ContactComponent,
   LoginComponent, RegisterComponent, ForgotComponent,
-  ClientComponent
+  ClientComponent, FidelityComponent, SettingsComponent
 ]

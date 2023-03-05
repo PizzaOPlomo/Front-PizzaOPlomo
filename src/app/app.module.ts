@@ -7,6 +7,7 @@ import {FooterComponent} from './components/include/footer/footer.component';
 import {HeaderComponent} from './components/include/header/header.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { CustomernavComponent } from './components/include/customernav/customernav.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {FormsModule} from "@angular/forms";
     AppComponent,
     FooterComponent,
     HeaderComponent,
+    CustomernavComponent
   ],
   imports: [
     BrowserModule,
