@@ -1,1 +1,72 @@
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+    Notre carte sur {{ selectedRestaurant }}
+  </h1>
+  <div class="mt-8">
+    <div class="flex justify-center text-center">
+      <div class="grid grid-cols-5">
+        <a (click)="changeCategory('menu')"
+             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full selected"
+             id="menu">
+          Menu
+        </a>
+        <a (click)="changeCategory('entrance')"
+             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+             id="entrance">
+          Entrée
+        </a>
+        <a (click)="changeCategory('dish')"
+             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+             id="dish">
+          Plat
+        </a>
+        <a (click)="changeCategory('dessert')"
+             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+             id="dessert">
+          Dessert
+        </a>
+        <a (click)="changeCategory('drink')"
+             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+             id="drink">
+          Boisson
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showedMenu === 'menu'" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+    Menu
+  </h1>
+
+</div>
+
+<div *ngIf="showedMenu === 'entrance'" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+    Entrée
+  </h1>
+
+</div>
+
+<div *ngIf="showedMenu === 'dish'" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+    Plat
+  </h1>
+
+</div>
+
+<div *ngIf="showedMenu === 'dessert'" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+    Dessert
+  </h1>
+
+</div>
+
+<div *ngIf="showedMenu === 'drink'" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+    Boisson
+  </h1>
+
+</div>
 

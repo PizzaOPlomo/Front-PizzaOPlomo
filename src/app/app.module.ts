@@ -15,7 +15,7 @@ import { CustomernavComponent } from './components/include/customernav/customern
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    CustomernavComponent
+    CustomernavComponent,
   ],
   imports: [
     BrowserModule,
