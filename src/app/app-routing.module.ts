@@ -11,6 +11,8 @@ import {ClientComponent} from "./components/base/client/client.component";
 import {ForgotComponent} from "./components/base/auth/forgot/forgot.component";
 import {FidelityComponent} from "./components/base/client/fidelity/fidelity.component";
 import {SettingsComponent} from "./components/base/client/settings/settings.component";
+import {Blog1Component} from "./components/base/blog/blog1/blog1.component";
+import {Blog2Component} from "./components/base/blog/blog2/blog2.component";
 
 const routes: Routes = [
   {
@@ -24,6 +26,12 @@ const routes: Routes = [
   },
   {
     path: "blog", component: BlogComponent
+  },
+  {
+    path: "blog/1", component: Blog1Component
+  },
+  {
+    path: "blog/2", component: Blog2Component
   },
   {
     path: "contact", component: ContactComponent
@@ -56,7 +64,8 @@ export class AppRoutingModule {
 }
 
 export const routingComponents = [
-  HomeComponent, CardComponent, SelectionComponent, BlogComponent, ContactComponent,
+  HomeComponent, CardComponent, SelectionComponent, ContactComponent,
+  BlogComponent, Blog1Component, Blog2Component,
   LoginComponent, RegisterComponent, ForgotComponent,
   ClientComponent, FidelityComponent, SettingsComponent
 ]

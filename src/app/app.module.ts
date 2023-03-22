@@ -8,6 +8,7 @@ import {HeaderComponent} from './components/include/header/header.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { CustomernavComponent } from './components/include/customernav/customernav.component';
+import { NewsletterComponent } from './components/include/blog/newsletter/newsletter.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CustomernavComponent } from './components/include/customernav/customern
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    CustomernavComponent
+    CustomernavComponent,
+    NewsletterComponent,
   ],
   imports: [
     BrowserModule,
