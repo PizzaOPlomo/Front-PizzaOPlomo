@@ -50,7 +50,7 @@
             Entrata + Piatto <span class="font-normal">ou</span> Piatto + Dolce
           </h1>
           <p class="text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+            Il menù classico
           </p>
           <app-menu [showedMenu]="1"></app-menu>
         </div>
@@ -69,7 +69,7 @@
             Entrata + Piatto + Dolce
           </h1>
           <p class="text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+            L'ottimo menù
           </p>
           <app-menu [showedMenu]="2"></app-menu>
         </div>
@@ -88,7 +88,7 @@
             Bambino
           </h1>
           <p class="text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+            Il menù perfetto per i bambini
           </p>
           <app-menu [showedMenu]="3"></app-menu>
         </div>
@@ -383,6 +383,27 @@
           </div>
         </div>
       </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Dessert Fromage" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/dessert/fromage.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Plateau de fromages
+          </h3>
+          <p class="text-gray-600 text-base">
+            Taleggio, gorgonzola, robiola, pecorino, parmigiano regiano
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                27.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -392,6 +413,31 @@
   <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
     Boisson
   </h1>
+  <div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Boisson Bière" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/drink/ichnusa.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Bière Ichnusa
+          </h3>
+          <p class="text-gray-600 text-base">
+            Bière italienne de provenance de la région Sardaigne.
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                6.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
 
