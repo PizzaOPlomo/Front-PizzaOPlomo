@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FidelityComponent } from './fidelity.component';
+import {FidelityComponent} from './fidelity.component';
 
 describe('FidelityComponent', () => {
   let component: FidelityComponent;
@@ -8,9 +8,9 @@ describe('FidelityComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FidelityComponent ]
+      declarations: [FidelityComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -6,7 +6,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   @Input() showedMenu: number | undefined;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
