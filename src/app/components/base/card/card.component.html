@@ -4,7 +4,7 @@
   </h1>
   <div class="mt-8">
     <div class="flex justify-center text-center">
-      <div class="grid grid-cols-5">
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-6">
         <a (click)="changeCategory('menu')"
            class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full selected"
            id="menu">
@@ -40,7 +40,7 @@
     Menu
   </h1>
   <div class="menu">
-    <div class="grid grid-cols-2 gap-4 mt-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
       <div class="bg-white rounded-lg shadow-lg p-4">
         <div class="flex justify-center">
           <img alt="" class="h-40 w-40 object-cover rounded-full" src="assets/img/favicon.webp">
@@ -55,7 +55,7 @@
           <app-menu [showedMenu]="1"></app-menu>
         </div>
         <div class="mt-4 flex justify-center">
-          <button class="px-6 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
+          <button class="px-12 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
             40€
           </button>
         </div>
@@ -74,7 +74,7 @@
           <app-menu [showedMenu]="2"></app-menu>
         </div>
         <div class="mt-4 flex justify-center">
-          <button class="px-6 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
+          <button class="px-12 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
             60€
           </button>
         </div>
@@ -93,7 +93,7 @@
           <app-menu [showedMenu]="3"></app-menu>
         </div>
         <div class="mt-4 flex justify-center">
-          <button class="px-6 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
+          <button class="px-12 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
             20€
           </button>
         </div>
@@ -313,7 +313,7 @@
              src="../../../../assets/img/card/pizza/linguine-speck-parmesan.webp">
         <div class="p-6">
           <h3 class="font-bold text-gray-800 text-xl mb-2">
-            Linguine
+            Linguine Classico
           </h3>
           <p class="text-gray-600 text-base">
             Speck, roquette, parmesan, huile d'olive
@@ -334,7 +334,7 @@
              src="../../../../assets/img/card/pizza/linguine-aux-truffes.webp">
         <div class="p-6">
           <h3 class="font-bold text-gray-800 text-xl mb-2">
-            Linguine
+            Linguine à la Truffe
           </h3>
           <p class="text-gray-600 text-base">
             Truffes, parmesan, huile d'olive
