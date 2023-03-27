@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {NavService} from "../../../services/nav/nav.service";
 
 @Component({
@@ -7,7 +7,8 @@ import {NavService} from "../../../services/nav/nav.service";
 })
 export class CustomernavComponent implements OnInit {
 
-  constructor(public navService: NavService) { }
+  constructor(public navService: NavService) {
+  }
 
   ngOnInit(): void {
   }

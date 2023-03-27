@@ -4,30 +4,30 @@
   </h1>
   <div class="mt-8">
     <div class="flex justify-center text-center">
-      <div class="grid grid-cols-5">
+      <div class="grid grid-cols-3 sm:grid-cols-5 gap-6">
         <a (click)="changeCategory('menu')"
-             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full selected"
-             id="menu">
+           class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full selected"
+           id="menu">
           Menu
         </a>
         <a (click)="changeCategory('entrance')"
-             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
-             id="entrance">
+           class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+           id="entrance">
           Entrée
         </a>
         <a (click)="changeCategory('dish')"
-             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
-             id="dish">
+           class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+           id="dish">
           Plat
         </a>
         <a (click)="changeCategory('dessert')"
-             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
-             id="dessert">
+           class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+           id="dessert">
           Dessert
         </a>
         <a (click)="changeCategory('drink')"
-             class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
-             id="drink">
+           class="cursor-pointer ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+           id="drink">
           Boisson
         </a>
       </div>
@@ -39,6 +39,70 @@
   <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
     Menu
   </h1>
+  <div class="menu">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      <div class="bg-white rounded-lg shadow-lg p-4">
+        <div class="flex justify-center">
+          <img alt="" class="h-40 w-40 object-cover rounded-full border-2 border-red-500"
+               src="assets/img/card/Classico.webp">
+        </div>
+        <div class="mt-4">
+          <h1 class="text-xl font-bold text-gray-700">
+            Entrata + Piatto <span class="font-normal">ou</span> Piatto + Dolce
+          </h1>
+          <p class="text-gray-500">
+            Il menù classico
+          </p>
+          <app-menu [showedMenu]="1"></app-menu>
+        </div>
+        <div class="mt-4 flex justify-center">
+          <button class="px-12 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
+            40€
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-4">
+        <div class="flex justify-center">
+          <img alt="" class="h-40 w-40 object-cover rounded-full border-2 border-red-500"
+               src="assets/img/card/ottimo.webp">
+        </div>
+        <div class="mt-4">
+          <h1 class="text-xl font-bold text-gray-700">
+            Entrata + Piatto + Dolce
+          </h1>
+          <p class="text-gray-500">
+            L'ottimo menù
+          </p>
+          <app-menu [showedMenu]="2"></app-menu>
+        </div>
+        <div class="mt-4 flex justify-center">
+          <button class="px-12 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
+            60€
+          </button>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-4">
+        <div class="flex justify-center">
+          <img alt="" class="h-40 w-40 object-cover rounded-full border-2 border-red-500"
+               src="assets/img/card/bambini.webp">
+        </div>
+        <div class="mt-4">
+          <h1 class="text-xl font-bold text-gray-700">
+            Bambino
+          </h1>
+          <p class="text-gray-500">
+            Il menù perfetto per i bambini
+          </p>
+          <app-menu [showedMenu]="3"></app-menu>
+        </div>
+        <div class="mt-4 flex justify-center">
+          <button class="px-12 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full">
+            20€
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
 
@@ -46,6 +110,73 @@
   <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
     Entrée
   </h1>
+  <div class="menu">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Entrée Bruschetta" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/entrance/bruschetta.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Bruschetta
+          </h3>
+          <p class="text-gray-600 text-base">
+            Tomates, prosciutto, basilic
+          </p>
+          <div class="mt-4">
+            <span class="text-gray-800 font-bold text-lg">
+              12.99€
+            </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Entrée Antipasti" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/entrance/antipasti.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Antipasti
+          </h3>
+          <p class="text-gray-600 text-base">
+            Jambon cru, mozzarella, briciolona
+          </p>
+          <div class="mt-4">
+            <span class="text-gray-800 font-bold text-lg">
+              27.99€
+            </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Entrée Carpaccio" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/entrance/carpaccio-de-bresaola-au-pesto.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Carpaccio de bresaola au pesto
+          </h3>
+          <p class="text-gray-600 text-base">
+            Bresaola, roquette, parmesan, pesto
+          </p>
+          <div class="mt-4">
+            <span class="text-gray-800 font-bold text-lg">
+              12.99€
+            </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
 
@@ -54,6 +185,177 @@
     Plat
   </h1>
 
+  <div class="menu">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Pizza Margherita" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/pizza/Margherita.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Pizza Margherita
+          </h3>
+          <p class="text-gray-600 text-base">
+            Sauce tomate, mozzarella, basilic
+          </p>
+          <div class="mt-4">
+            <span class="text-gray-800 font-bold text-lg">
+              12.99€
+            </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Pizza Pepperoni" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/pizza/Pepperoni.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Pizza Pepperoni
+          </h3>
+          <p class="text-gray-600 text-base">
+            Sauce tomate, mozzarella, pepperoni
+          </p>
+          <div class="mt-4">
+            <span class="text-gray-800 font-bold text-lg">
+              14.99€
+            </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Pizza Végétarienne" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/pizza/Vegetarienne.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Pizza Végétarienne
+          </h3>
+          <p class="text-gray-600 text-base">
+            Sauce tomate, mozzarella, légumes frais
+          </p>
+          <div class="mt-4">
+            <span class="text-gray-800 font-bold text-lg">
+              16.99€
+            </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Pizza à la Truffe" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/pizza/Truffe.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Pizza à la Truffe
+          </h3>
+          <p class="text-gray-600 text-base">
+            Crème fraîche, mozzarella, champignons, huile de truffe, copeaux de
+            parmesan
+          </p>
+          <div class="mt-4">
+            <span class="text-gray-800 font-bold text-lg">19.99€</span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Pizza Calzone" class="w-full h-48 object-cover" src="../../../../assets/img/card/pizza/Calzone.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Pizza Calzone
+          </h3>
+          <p class="text-gray-600 text-base">
+            Sauce tomate, mozzarella, jambon, champignons, œuf
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                17.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Pizza Quatre Saisons" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/pizza/4saisons.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Pizza Quatre Saisons
+          </h3>
+          <p class="text-gray-600 text-base">
+            Sauce tomate, mozzarella, champignons, artichauts, jambon, olives, origan
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                18.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Pizza Linguine" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/pizza/linguine-speck-parmesan.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Linguine Classico
+          </h3>
+          <p class="text-gray-600 text-base">
+            Speck, roquette, parmesan, huile d'olive
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                18.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Pizza Linguine" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/pizza/linguine-aux-truffes.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Linguine à la Truffe
+          </h3>
+          <p class="text-gray-600 text-base">
+            Truffes, parmesan, huile d'olive
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                18.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div *ngIf="showedMenu === 'dessert'" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -61,12 +363,147 @@
     Dessert
   </h1>
 
+  <div class="menu">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Dessert Tiramisu" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/dessert/tiramisu.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Tiramisu
+          </h3>
+          <p class="text-gray-600 text-base">
+            Mascarpone, café, biscuits
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                18.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Dessert Panna Cotta" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/dessert/panna-cotta.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Panna Cotta
+          </h3>
+          <p class="text-gray-600 text-base">
+            Fromage blanc, coulis de fruits rouges, tuile
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                18.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Dessert Cannoli" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/dessert/cannoli.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Cannoli
+          </h3>
+          <p class="text-gray-600 text-base">
+            Crème pâtissière, cannelle, sucre glace
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                18.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Dessert Cannoli" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/dessert/granita.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            La Granita
+          </h3>
+          <p class="text-gray-600 text-base">
+            Sorbet fraise, citron, foglia di menta
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                18.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Dessert Fromage" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/dessert/fromage.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Plateau de fromages
+          </h3>
+          <p class="text-gray-600 text-base">
+            Taleggio, gorgonzola, robiola, pecorino, parmigiano regiano
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                27.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div *ngIf="showedMenu === 'drink'" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
     Boisson
   </h1>
+  <div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img alt="Boisson Bière" class="w-full h-48 object-cover"
+             src="../../../../assets/img/card/drink/ichnusa.webp">
+        <div class="p-6">
+          <h3 class="font-bold text-gray-800 text-xl mb-2">
+            Bière Ichnusa
+          </h3>
+          <p class="text-gray-600 text-base">
+            Bière italienne de provenance de la région Sardaigne.
+          </p>
+          <div class="mt-4">
+              <span class="text-gray-800 font-bold text-lg">
+                6.99€
+              </span>
+            <button class="ml-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full"
+                    routerLink="card">
+              Commander
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
 

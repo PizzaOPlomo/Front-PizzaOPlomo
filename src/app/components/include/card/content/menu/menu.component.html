@@ -1,0 +1,53 @@
+<h2 class="font-bold mt-6">
+  Entrée
+</h2>
+<ul class="text-gray-500">
+  <li *ngIf="showedMenu != 3">
+    Bruschetta
+  </li>
+  <li *ngIf="showedMenu != 3">
+    Carpaccio de bresaola au pesto
+  </li>
+  <!-- Bambino -->
+  <li *ngIf="showedMenu == 3">
+    Petite bruschetta
+  </li>
+</ul>
+<h2 class="font-bold mt-6">
+  Plat
+</h2>
+<ul class="text-gray-500">
+  <li *ngIf="showedMenu != 3">
+    Pizza au choix
+  </li>
+  <li *ngIf="showedMenu != 3">
+    Linguine au choix
+  </li>
+
+  <!-- Bambino -->
+  <li *ngIf="showedMenu == 3">
+    Petite pizza au choix
+  </li>
+</ul>
+<h2 class="font-bold mt-6">
+  Dessert
+</h2>
+<ul class="text-gray-500">
+  <li *ngIf="showedMenu != 3">
+    Tiramisu
+  </li>
+  <li *ngIf="showedMenu != 3">
+    Panna Cotta
+  </li>
+  <li *ngIf="showedMenu != 3">
+    Cannoli
+  </li>
+  <li *ngIf="showedMenu != 3">
+    La Granita
+  </li>
+
+  <!-- Bambino -->
+  <li *ngIf="showedMenu == 3">
+    Glâce à l'italienne
+  </li>
+</ul>
