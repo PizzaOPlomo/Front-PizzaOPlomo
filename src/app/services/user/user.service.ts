@@ -56,4 +56,10 @@ export class UserService {
     return response;
   }
 
+  checkLogin(): void {
+    if (!this.isConnected) {
+      this.router.navigate(["/auth/login"]);
+    }
+  }
+
 }

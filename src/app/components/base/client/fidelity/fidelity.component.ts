@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from "../../../../services/user/user.service";
 
 @Component({
   selector: 'app-fidelity',
@@ -9,7 +10,9 @@ export class FidelityComponent implements OnInit {
   QRCodeShowed: boolean = false;
   QRCode: string = 'https://www.pngmart.com/files/10/Qr-Code-Transparent-PNG.png';
 
-  constructor() { }
+  constructor(private userService: UserService) {
+    userService.checkLogin();
+  }
 
   ngOnInit(): void {
   }
