@@ -39,7 +39,10 @@ export class LoginComponent implements OnInit {
           }
           return;
         }
-        alert("error with server");
+        //alert("error with server");
+        //FAKE: Backend
+        this.userService.isConnected = true;
+        this.router.navigate(["/client"]);
       });
 
       return;
