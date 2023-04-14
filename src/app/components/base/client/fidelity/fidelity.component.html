@@ -3,19 +3,12 @@
   <div class="flex-1 p-8">
     <h2 class="text-3xl font-bold mb-4">Fidélité</h2>
 
-    <section class="bg-gray-100 py-16 i">
+    <section class="py-16 i">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-gray-800 mb-8">Votre QR Code</h2>
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
           <div class="p-6">
             <div class="flex flex-col items-center justify-center">
-              <div class="rounded-full bg-gray-300 w-24 h-24 flex items-center justify-center mb-4">
-                <svg class="w-12 h-12 text-gray-800" fill="currentColor" viewBox="0 0 20 20"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm4.66 10.66v1.53a.88.88 0 0 1-.88.88H6.22a.88.88 0 0 1-.88-.88V6.22a.88.88 0 0 1 .88-.88h1.53v.88H6.22v6.2h6.2v-1.53H7.1v-.88h3.54v-3.54h.88z"/>
-                </svg>
-              </div>
               <p class="text-gray-800 text-xl mb-4">Faites scanner le QR code pour accéder aux fidélités</p>
               <img *ngIf="QRCodeShowed"
                    alt="QR code"

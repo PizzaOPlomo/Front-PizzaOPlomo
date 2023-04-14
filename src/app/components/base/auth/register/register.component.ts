@@ -31,7 +31,9 @@ export class RegisterComponent implements OnInit {
           this.router.navigate(["/auth/login"]);
           return;
         }
-        alert("error with server");
+        //alert("error with server");
+        //FAKE: Backend
+        this.router.navigate(["/auth/login"]);
       });
 
       return;
